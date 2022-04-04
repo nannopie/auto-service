@@ -1,0 +1,41 @@
+<div class="auth-container">
+  <div class="row auth-main">
+    <div class="col-sm-12 auth-form-section img">
+      <div class="form-section">
+        <div class="auth-wrapper frame">
+          <h2 class="welcome-msg"> Bank </h2>
+          <p class="auth-signup-text text-muted">Please select a bank and enter a number</p>
+          <form class="validate-form">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Select Bank</mat-label>
+              <mat-select>
+                <mat-option value="option1">กสิกร</mat-option>
+                <mat-option value="option2">กรุงไทย</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <br>
+
+            <div class="row">
+              <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Number</mat-label>
+                  <input matInput />
+                </mat-form-field>
+              </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="container-auth-form-btn">
+              <button mat-flat-button color="primary" class="auth-form-btn" routerLink="/authentication/signup">
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

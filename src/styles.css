@@ -1,0 +1,29 @@
+ .mat-form-field-wrapper {
+  padding-bottom: 0px;
+  background: #fff;
+}
+
+/* .mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: -2px;
+} */
+
+th {
+  text-align: center;
+}
+
+.mt {
+  margin-top: 9px;
+  text-align: center;
+}
+
+.frame {
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+.img {
+  background-image: url("assets/system888/BG-Customer.jpg");
+}
+
+
+

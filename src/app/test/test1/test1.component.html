@@ -1,0 +1,110 @@
+<div class="auth-container">
+  <div class="auth-main" style="padding-top: 15px;">
+    <div class="col-sm-12 auth-form-section">
+      <div class="form-section">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <table class="table table-primary table-bordered">
+              <thead>
+                <tr>
+                  <th>ชื่อ</th>
+                  <th>นามสกุล</th>
+                  <th>เบอร์โทรศัพท์</th>
+                  <th>ธนาคาร</th>
+                  <th>หมายเลขธนาคาร</th>
+                  <th>uername</th>
+                  <th>password</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Name</mat-label>
+                      <input matInput type="text" name="name" [(ngModel)]="fname" />
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Sername</mat-label>
+                      <input matInput type="text" name="sername" [(ngModel)]="lname" />
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Number</mat-label>
+                      <input matInput type="text" name="phone" [(ngModel)]="phone" />
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Bank</mat-label>
+                      <input matInput type="text" name="bank" [(ngModel)]="bank" />
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Bank Name</mat-label>
+                      <input matInput type="text" name="bank_name" [(ngModel)]="bank_name" />
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input matInput type="text" name="username" [(ngModel)]="username" />
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput type="text" name="password" [(ngModel)]="password" />
+                    </mat-form-field>
+                  </td>
+                </tr>
+              </tbody>
+              <!-- <tbody>
+                <tr *ngFor="let item of auto;let i = index">
+                  <td style="text-align: center;">{{ i + 1 }}</td>
+                  <td style="text-align: center;">{{item.fname}}</td>
+                  <td style="text-align: center;">{{item.lname}}</td>
+                  <td style="text-align: center;">{{item.phone}}</td>
+                  <td style="text-align: center;">{{item.bank}}</td>
+                  <td style="text-align: center;">{{item.bank_name}</td>
+                  <td style="text-align: center;">{{item.username}}</td>
+                  <td style="text-align: center;">{{item.password}}</td>
+                  <td>
+                    <input type="text" maxlength="10" name="fname" [(ngModel)]="fname" />
+                  </td>
+                  <td>
+                    <div class="row">
+                      <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                          <mat-label>Name</mat-label>
+                          <input matInput type="text" maxlength="10" name="fname" [(ngModel)]="fname" />
+                        <input matInput type="text" name="sername" [(ngModel)]="lname" />
+                        <input matInput type="text" name="phone" [(ngModel)]="phone" />
+                        <input matInput type="text" name="bank" [(ngModel)]="bank" />
+                        <input matInput type="text" name="bank_name" [(ngModel)]="bank_name" />
+                        <input matInput type="text" name="username" [(ngModel)]="username" />
+                        <input matInput type="text" name="password" [(ngModel)]="password" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody> -->
+            </table>
+            <tfoot>
+              <button mat-flat-button color="primary"
+                (click)='testSave(fname, lname, phone, bank, bank_name, username, password)'>
+                Save
+              </button>
+              <!-- <button mat-flat-button color="primary">
+                Next
+              </button> -->
+            </tfoot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
