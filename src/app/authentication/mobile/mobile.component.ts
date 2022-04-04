@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { AutoService } from 'src/app/shared/auto-service';
 import { AutoserviceService } from 'src/app/shared/auto-service.service';
 
@@ -15,10 +16,11 @@ export class MobileComponent implements OnInit {
   autoservice: AutoService[] = [];
   // auto: AutoService = {} as AutoService;
 
-  phone: string;
+  phone: string = null;
   statusUpdate: boolean = false;
 
   constructor(private service: AutoserviceService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -55,4 +57,18 @@ export class MobileComponent implements OnInit {
   //     ErrorMessage.alert(ex);
   //   }
   // }
+
+  next() {
+    try {
+      if (this.phone == '' || this.phone == null) throw new Error("กรุณากรอกหมายเลขโทรศัพท์");
+      const p = this.phone.split('-').join('');
+      this.phone = p;
+      if (this.phone.match(/\D/)) throw new Error("กรุณากรอกเพียงตัวเลข");;
+      if (this.phone.length < 10) throw new Error("หมายเลขของคุณไม่ครบ");
+      this.router.navigateByUrl('/authentication/otp', { state: { data: this.phone } });
+    }
+    catch (ex) {
+      ErrorMessage.alert(ex);
+    }
+  }
 }

@@ -8,7 +8,7 @@
           <form class="validate-form">
             <div class="otp"><button mat-raised-button="" color="primary" type="button"
                 class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
-                ng-reflect-color="primary"><span class="mat-button-wrapper" (click)="sendOtp()">Send OTP</span><span matripple=""
+                ng-reflect-color="primary"><span class="mat-button-wrapper" (click)="sendOtp()">Send OTP to {{tel}}</span><span matripple=""
                   class="mat-ripple mat-button-ripple" ng-reflect-disabled="false" ng-reflect-centered="false"
                   ng-reflect-trigger="[object HTMLButtonElement]"></span><span
                   class="mat-button-focus-overlay"></span></button>
@@ -17,7 +17,7 @@
               <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
                 <mat-form-field class="example-full-width" appearance="outline">
                   <mat-label>Number</mat-label>
-                  <input matInput type="text" maxlength="10" name="tel" [(ngModel)]="tel"/>
+                  <input matInput type="text" maxlength="10" name="tel" [(ngModel)]="otp"/>
                 </mat-form-field>
               </div>
             </div>
